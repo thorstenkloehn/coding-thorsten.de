@@ -9,4 +9,6 @@ build_search_index = false
 [extra]
 menu = [
     { name = "Start", url = "/" },
+    { name = "Impressum", url = "/impressum" },
+    { name = "Datenschutzerklärung", url = "/datenschutz" },
 ]
