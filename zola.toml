@@ -1,0 +1,12 @@
+# Vor dem Livegang base_url auf die echte Domain setzen.
+base_url = "https://coding-thorsten.de"
+title = "coding-thorsten.de"
+description = "Programmieren lernen und verstehen, Schritt für Schritt."
+default_language = "de"
+generate_feeds = false
+build_search_index = false
+
+[extra]
+menu = [
+    { name = "Start", url = "/" },
+]

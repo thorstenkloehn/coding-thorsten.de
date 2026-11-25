@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{{ get_url(path='/') }}">{{ config.title }}</a>
+      <ul class="navbar-nav">
+        {% for item in config.extra.menu %}
+        <li class="nav-item"><a class="nav-link" href="{{ get_url(path=item.url) }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+  <main class="container py-4">
+    {% block content %}{% endblock content %}
+  </main>
+  <script src="{{ get_url(path='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
